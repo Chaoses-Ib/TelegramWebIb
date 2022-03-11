@@ -1,3 +1,7 @@
+# Telegram Web Ib
+
+* OthersFolder: Change the "All" folder to "Others" folder
+
 # Telegram Web Z
 
 This project won the first prize 🥇 at [Telegram Lightweight Client Contest](https://contest.com/javascript-web-3) and now is an official Telegram client available to anyone at [web.telegram.org/z](https://web.telegram.org/z).

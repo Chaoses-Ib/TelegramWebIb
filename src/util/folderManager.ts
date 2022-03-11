@@ -263,8 +263,16 @@ function updateFolders(
   const changedFolders = [];
 
   if (isAllFolderChanged) {
-    const newListIds = global.chats.listIds.active!;
+    //#Ib.OthersFolder: const newListIds = global.chats.listIds.active!;
+    var newListIds = global.chats.listIds.active!;
     const newPinnedIds = global.chats.orderedPinnedIds.active;
+
+    //#Ib.OthersFolder {
+    const newFoldersById = global.chatFolders.byId;
+    newListIds = newListIds.filter(listId =>
+      !Object.values(newFoldersById).some((folder) => folder.includedChatIds.includes(listId))
+    );
+    //}
 
     prepared.folderSummariesById[ALL_FOLDER_ID] = buildFolderSummaryFromMainList(
       ALL_FOLDER_ID, newListIds, newPinnedIds,

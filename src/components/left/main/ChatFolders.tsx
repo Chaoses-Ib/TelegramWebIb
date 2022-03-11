@@ -79,7 +79,8 @@ const ChatFolders: FC<OwnProps & StateProps> = ({
     return [
       {
         id: ALL_FOLDER_ID,
-        title: lang.code === 'en' ? 'All' : lang('FilterAllChats'),
+        //#Ib.OthersFolder: title: lang.code === 'en' ? 'All' : lang('FilterAllChats'),
+        title: lang.code === 'en' ? 'Others' : lang('FilterAllChats'),
       },
       ...displayedFolders.map(({ id, title }) => ({
         id,
